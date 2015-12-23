@@ -24,18 +24,20 @@
       name: "Dodecahedron",
       price: 2.95,
       description: "Some gems have hidden qualities beyond their luster, beyond their shine... Dodecahedron is one of those gems. ",
+      color: '#9B2830',
       canPurchase: true,
       images: [
-        {
-          full: "images/dodecahedron-01-full.png",
-          thumb: "images/dodecahedron-01-thumb.png"
-        }
+        "images/dodecahedron.png",
+        "images/dodecahedron.png"
       ]
     },
     {
       name: "Pentagonal Gem",
       price: 5.95,
       description: "Some gems have hidden qualities beyond their luster, beyond their shine... Pentagonal is one of those gems. ",
+      images: [
+        "images/Pentagonal.png"
+      ],
       canPurchase: true
     },
     {
@@ -47,7 +49,7 @@
             color: '#CCC',
             faces: 14,
             images: [
-              "images/gem-02.gif",
+              "images/dodecahedron.png",
               "images/gem-05.gif",
               "images/gem-09.gif"
             ],
