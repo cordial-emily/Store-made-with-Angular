@@ -1,5 +1,11 @@
 /** custom css ****/
 
+
+/* hide all ul li list bullets */
+ul {
+    list-style-type: none;
+}
+
 /* main width */
 .container.custom-width {
     max-width: 800;

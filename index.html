@@ -56,16 +56,37 @@
           <div class="panel" ng-show="panel.isSelected(3)">
             <h4>Reviews</h4>
             <ul>
-              <li ng-repeat="review in product.reviews">>
+              <li ng-repeat="review in product.reviews">
                 <blockquote>
-                  <strong>Rated: {{review.stars}} stars</strong><br>
+                  <strong>{{review.stars}} stars</strong><br>
                   {{review.body}}<br>
-                  <strong>Author: {{review.author}}</strong>
+                  <cite>by: {{review.author}}</cite>
 
                 </blockquote>
               </li>
             </ul>
+            <!-- start form -->
+            <form name="reviewForm" role="form">
+              <label for="pwd">Rate the product</label>
+              <blockquote>
+                <b>Stars: {{review.stars}}</b><br>
+                {{review.body}}<br>
+                <cite>by: {{review.author}}</cite>
+              </blockquote>
+              <select class="form-group form-control" id="pwd" ng-model="review.stars">
+                <option value="1">1 star</option>
+                <option value="2">2 star</option>
+                <option value="3">3 star</option>
+              </select>
+              <textarea name="name" class="form-control" ng-model="review.body">Write your review.</textarea>
+              <label for="">by: </label>
+              <input ng-model="review.author" type="email" class="form-control" value="your email address"/>
+              <input type="submit" value="Submit Review" class="btn btn-primary btn-lg" />
+            </form>
+            <!-- end form -->
           </div>
+
+
         </section>
       </div>
       <div class="col-md-4">
