@@ -49,7 +49,7 @@
             color: '#CCC',
             faces: 14,
             images: [
-              "images/dodecahedron.png",
+              "images/Azurite.png",
               "images/gem-05.gif",
               "images/gem-09.gif"
             ],
@@ -74,7 +74,7 @@
             color: '#EEE',
             faces: 12,
             images: [
-              "images/gem-01.gif",
+              "images/Bloodstone.png",
               "images/gem-03.gif",
               "images/gem-04.gif",
             ],
@@ -99,7 +99,7 @@
             color: '#000',
             faces: 6,
             images: [
-              "images/gem-06.gif",
+              "images/Zircon.png",
               "images/gem-07.gif",
               "images/gem-09.gif"
             ],
