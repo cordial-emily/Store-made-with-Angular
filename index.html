@@ -1,0 +1,68 @@
+<!DOCTYPE html lang="en">
+<html ng-app="store">
+<head>
+  <meta charset="utf-8">
+  <title>Gem Store in Angular</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.6-dist/css/bootstrap.min.css" />
+  <script type="text/javascript" src="angular.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div class="container" ng-controller="StoreController as store">
+
+
+  <div class="row product" ng-repeat="product in store.products">
+
+
+
+    <div class="col-md-1">
+      <img ng-src="{{ product.images[0].thumb }}"/>
+    </div>
+    <div class="col-md-7">
+      <h1>{{product.name}}</h1>
+      <h2>{{product.price | currency}}</h2>
+      <p>{{product.description}}</p>
+      <button ng-show="product.canPurchase">Add to Cart</button>
+    </div>
+    <div class="col-md-4">
+      <section ng-controller="PanelController as panel">
+        <ul class="nav nav-pills">
+          <li ng-class="{ active:panel.isSelected(1) }"> <a href ng-click="panel.selectTab(1)">Description</a></li>
+          <li ng-class="{ active:panel.isSelected(2) }"> <a href ng-click="panel.selectTab(2)">Specification</a></li>
+          <li ng-class="{ active:panel.isSelected(3) }"> <a href ng-click="panel.selectTab(3)">Reviews</a></li>
+        </ul>
+
+
+        <div class="panel" ng-show="panel.isSelected(1)">
+          <h4>Description</h4>
+          <p>{{product.description}}</p>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(2)">
+          <h4>Specifications</h4>
+          <blockquote>Rarity: {{product.rarity}}<br>
+          Color: <div style="width:40px;height:40px;background-color:{{product.color}};border: 1px solid #000;"></div><br>
+          Faces: {{product.faces}}</blockquote>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(3)">
+          <h4>Reviews</h4>
+          <ul>
+            <li ng-repeat="review in product.reviews">>
+              <blockquote>
+                <strong>Rated: {{review.stars}} stars</strong><br>
+                {{review.body}}<br>
+                <strong>Author: {{review.author}}</strong>
+
+              </blockquote>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+
+
+  </div>
+</div>
+</body>
+
+</html>
