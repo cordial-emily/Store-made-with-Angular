@@ -24,29 +24,56 @@
       name: "Dodecahedron",
       price: 2.95,
       description: "Some gems have hidden qualities beyond their luster, beyond their shine... Dodecahedron is one of those gems. ",
-      color: '#9B2830',
+      rarity: 4,
+      color: '#C5525A',
+      faces: 10,
       canPurchase: true,
       images: [
         "images/dodecahedron.png",
         "images/dodecahedron.png"
-      ]
+      ],
+      reviews: [{
+        stars: 3,
+        body: "I think this gem was just OK, could honestly use more shine, IMO.",
+        author: "JimmyDean@example.org",
+        createdOn: 1397490980837
+      }, {
+        stars: 4,
+        body: "Any gem with 10 faces is for me!",
+        author: "gemsRock@example.org",
+        createdOn: 1397490980837
+      }]
     },
     {
       name: "Pentagonal Gem",
       price: 5.95,
-      description: "Some gems have hidden qualities beyond their luster, beyond their shine... Pentagonal is one of those gems. ",
+      description: "A very affordable gemstone. Due to its often hazy color and frequent flaws, it is more often tumbled or used as beads over faceting into gemstone cuts.",
+      rarity: 4,
+      color:'#32B179',
+      faces: 6,
       images: [
         "images/Pentagonal.png"
       ],
+      reviews: [{
+        stars: 3,
+        body: "I think this gem was just OK, could honestly use more shine, IMO.",
+        author: "JimmyDean@example.org",
+        createdOn: 1397490980837
+      }, {
+        stars: 4,
+        body: "Any gem with 6 faces is for me!",
+        author: "gemsRock@example.org",
+        createdOn: 1397490980837
+      }],
       canPurchase: true
     },
     {
             name: 'Azurite',
-            description: "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
+            description: "A soft, deep blue copper mineral produced by weathering of copper ore deposits.",
             shine: 8,
             price: 110.50,
             rarity: 7,
-            color: '#CCC',
+            color: '#1A328D',
             faces: 14,
             images: [
               "images/Azurite.png",
@@ -63,7 +90,8 @@
               body: "This gem sucks.",
               author: "tim@example.org",
               createdOn: 1397490980837
-            }]
+            }],
+            canPurchase: true
           },
           {
             name: 'Bloodstone',
@@ -71,7 +99,7 @@
             shine: 9,
             price: 22.90,
             rarity: 6,
-            color: '#EEE',
+            color: '#7A0002',
             faces: 12,
             images: [
               "images/Bloodstone.png",
@@ -88,7 +116,8 @@
               body: "Any gem with 12 faces is for me!",
               author: "gemsRock@example.org",
               createdOn: 1397490980837
-            }]
+            }],
+            canPurchase: true
           },
           {
             name: 'Zircon',
@@ -96,8 +125,8 @@
             shine: 70,
             price: 1100,
             rarity: 2,
-            color: '#000',
-            faces: 6,
+            color: '#00AFE9',
+            faces: 12,
             images: [
               "images/Zircon.png",
               "images/gem-07.gif",
@@ -118,7 +147,8 @@
               body: "Don't waste your rubles!",
               author: "nat@example.org",
               createdOn: 1397490980837
-            }]
+            }],
+            canPurchase: true
           }
 
   ];
