@@ -66,7 +66,7 @@
               </li>
             </ul>
             <!-- start form -->
-            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" role="form" ng-submit="reviewCtrl.addReview(product)">
+            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" role="form" ng-submit="reviewCtrl.addReview(product)" novalidate>
               <label for="rateproduct">Rate the product</label>
               <blockquote>
                 <b>Stars: {{reviewCtrl.review.stars}}</b><br>
