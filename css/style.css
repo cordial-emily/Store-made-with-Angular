@@ -32,3 +32,11 @@ ul {
     color: #fff;
     background-color: #9B2878;
 }
+
+/* validate form fields */
+.ng-invalid.ng-dirty {
+  border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+  border-color: #78FA89;
+}
