@@ -19,6 +19,11 @@
     };
   });
 
+// add ng-controller="ReviewController as reviewCtrl" to html
+  app.controller("ReviewController", function() {
+    this.review = {};
+  });
+
   var gems = [
     {
       name: "Dodecahedron",

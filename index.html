@@ -66,7 +66,7 @@
               </li>
             </ul>
             <!-- start form -->
-            <form name="reviewForm" role="form">
+            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" role="form">
               <label for="rateproduct">Rate the product</label>
               <blockquote>
                 <b>Stars: {{review.stars}}</b><br>
@@ -82,7 +82,23 @@
               <label for="">by: </label>
               <input ng-model="review.author" type="email" class="form-control" value="your email address"/>
               <!--<input ng-model="review.terms" type="checkbox" /> I agree to the terms. </input> -->
-              
+              <!--<input ng-model="review.color" type="radio" value="green" />       -->
+              <!--  Review Form example from course-->
+              <!-- <h4>Submit a Review</h4>
+              <fieldset class="form-group">
+                <select class="form-control" ng-options="stars for stars in [5,4,3,2,1]"  title="Stars" ng-model="review.stars">
+                  <option value="">Rate the Product</option>
+                </select>
+              </fieldset>
+              <fieldset class="form-group">
+                <textarea class="form-control" placeholder="Write a short review of the product..." title="Review" ng-model="review.body"></textarea>
+              </fieldset>
+              <fieldset class="form-group">
+                <input type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" ng-model="review.author" />
+              </fieldset>
+              <fieldset class="form-group">
+                <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+              </fieldset> -->
               <input type="submit" value="Submit Review" class="btn btn-primary btn-lg" />
             </form>
             <!-- end form -->
