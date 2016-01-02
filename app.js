@@ -22,7 +22,7 @@
 // add ng-controller="ReviewController as reviewCtrl" to html
   app.controller("ReviewController", function() {
     this.review = {};
-    
+    this.review.createdOn = Date.now();
     this.addReview = function(product) {
       product.reviews.push(this.review);
       this.review = {};
