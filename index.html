@@ -17,13 +17,13 @@
 <div class="container custom-width" ng-controller="StoreController as store">
 
   <div class="row product jumbotron" ng-repeat="product in store.products">
-    <!-- one inner row -->
+    <!-- one inner row   NAME and PRICE-->
     <div class="row">
     <div class="col-md-6"><h2>{{product.name}}</h2></div>
     <div class="col-md-6"><h2 style="text-align: right;"><i>{{product.price | currency }}</i></h2> </div>
     </div><!-- end inner row -->
 
-    <!-- two inner row -->
+    <!-- two inner row   IMAGE -->
     <div class="row">
       <div class="col-md-12">
         <div class="gem-holder">
@@ -32,7 +32,7 @@
       </div>
     </div><!-- end inner row -->
 
-    <!-- two inner row -->
+    <!-- two inner row  PANELS -->
     <div class="row">
       <div class="col-md-8">
         <section ng-controller="PanelController as panel">
@@ -42,17 +42,19 @@
             <li ng-class="{ active:panel.isSelected(3) }"> <a href ng-click="panel.selectTab(3)">Reviews</a></li>
           </ul>
 
-
+          <!-- DESCRIPTION PANEL -->
           <div class="panel" ng-show="panel.isSelected(1)">
             <h4>Description</h4>
             <p>{{product.description}}</p>
           </div>
+          <!-- SPECIFICATION PANEL -->
           <div class="panel" ng-show="panel.isSelected(2)">
             <h4>Specifications</h4>
             <blockquote>Rarity: {{product.rarity}}<br>
             Color: <div style="width:40px;height:40px;background-color:{{product.color}};border: 1px solid #000;"></div><br>
             Faces: {{product.faces}}</blockquote>
           </div>
+          <!-- REVIEW PANEL -->
           <div class="panel" ng-show="panel.isSelected(3)">
             <h4>Reviews</h4>
             <ul>
