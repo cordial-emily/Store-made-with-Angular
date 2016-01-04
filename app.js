@@ -29,6 +29,14 @@
     };
   });
 
+// Building a custom directive for <product-title></product-title>
+app.directive('productTitle', function(){
+  return {
+    restrict: 'E', /* stands for Element */
+    templateUrl: 'product-title.html'
+  };
+});
+
   var gems = [
     {
       name: "Dodecahedron",
